@@ -6,12 +6,12 @@
 <title>ByteDX — Software for Education, Engineering &amp; Data Science</title>
 <meta name="description" content="ByteDX builds practical software for schools, engineering teams, and data-driven businesses in Pakistan. Makers of EduSphere, a digital school management system for attendance, fees, and communication.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://bytedx.com/">
+<link rel="canonical" href="https://bytedx.tech/">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="ByteDX — Software for Education, Engineering & Data Science">
 <meta property="og:description" content="ByteDX builds practical software for schools, engineering teams, and data-driven businesses in Pakistan. Makers of EduSphere, a digital school management system.">
-<meta property="og:url" content="https://bytedx.com/">
+<meta property="og:url" content="https://bytedx.tech/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ByteDX — Software for Education, Engineering & Data Science">
 <meta name="twitter:description" content="Makers of EduSphere, a digital school management system built for Pakistani schools.">
@@ -21,7 +21,7 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "ByteDX",
-  "url": "https://bytedx.com/",
+  "url": "https://bytedx.tech/",
   "description": "ByteDX builds practical software for education, engineering, and data science. Makers of EduSphere, a digital school management system for attendance, fees, and parent communication.",
   "areaServed": "Pakistan",
   "address": {
@@ -29,7 +29,13 @@
     "addressLocality": "Gujranwala",
     "addressCountry": "PK"
   },
-  "email": "hamzameer4152@gmail.com",
+  "email": "bytedx.official@gmail.com",
+  "founder": [
+    { "@type": "Person", "name": "Hamza Meer", "jobTitle": "Founder & Acting CEO", "alumniOf": "Bachelor of Computer Science" },
+    { "@type": "Person", "name": "Haider Ali", "jobTitle": "Co-founder & CTO", "alumniOf": "Bachelor of Computer Science" },
+    { "@type": "Person", "name": "Ansar", "jobTitle": "Co-founder & Manager", "alumniOf": "Bachelor of Laws (LLB)" },
+    { "@type": "Person", "name": "Ali", "jobTitle": "Co-founder & Senior Technical Advisor", "alumniOf": "PhD in Civil Engineering" }
+  ],
   "sameAs": []
 }
 </script>
@@ -317,6 +323,23 @@
   .why-item h3{font-size:18px; font-weight:600; color:var(--navy); margin-bottom:10px;}
   .why-item p{font-size:14px; color:var(--slate); line-height:1.65;}
 
+  /* -------- team -------- */
+  .team-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:24px;}
+  .team-card{
+    background:var(--card); border:1px solid var(--line); border-radius:14px; padding:28px 22px;
+    text-align:center; transition:transform 0.2s, box-shadow 0.2s;
+  }
+  .team-card:hover{transform:translateY(-4px); box-shadow:0 16px 40px rgba(26,34,56,0.08);}
+  .team-avatar{
+    width:112px; height:112px; border-radius:50%; margin:0 auto 18px;
+    background:var(--navy); display:flex; align-items:center; justify-content:center;
+    border:3px solid var(--amber-bg); overflow:hidden; flex-shrink:0;
+  }
+  .team-avatar img{width:100%; height:100%; object-fit:cover; object-position:center top; display:block;}
+  .team-card h3{font-size:17px; font-weight:600; color:var(--navy); margin-bottom:4px; font-family:'IBM Plex Sans', sans-serif;}
+  .team-role{font-size:13.5px; font-weight:600; color:var(--amber-dark); margin-bottom:8px; display:block;}
+  .team-qual{font-size:12.5px; color:var(--slate); line-height:1.5;}
+
   /* -------- FAQ -------- */
   .faq-list{max-width:760px;}
   details{
@@ -388,6 +411,7 @@
     .product-grid{grid-template-columns:1fr;}
     .product-frame{transform:none; order:-1;}
     .why-grid{grid-template-columns:1fr; gap:36px;}
+    .team-grid{grid-template-columns:repeat(2,1fr);}
     .contact-grid{grid-template-columns:1fr;}
     .nav-links{
       position:fixed; top:74px; left:0; right:0; background:var(--paper);
@@ -401,6 +425,7 @@
   @media (max-width: 520px){
     section{padding:70px 0;}
     .hero{padding:90px 0 90px;}
+    .team-grid{grid-template-columns:1fr; max-width:280px; margin:0 auto;}
   }
 </style>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231A2238'/%3E%3Cpath d='M24 20 L14 32 L24 44' stroke='%23DD9A3D' stroke-width='4.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M40 20 L50 32 L40 44' stroke='%23DD9A3D' stroke-width='4.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='32' r='4.6' fill='%23DD9A3D'/%3E%3C/svg%3E">
@@ -421,6 +446,7 @@
       <a href="#services">Services</a>
       <a href="#product">EduSphere</a>
       <a href="#why">Why Us</a>
+      <a href="#team">Team</a>
       <a href="#faq">FAQ</a>
       <a href="#contact" class="nav-cta">Get in Touch</a>
     </nav>
@@ -576,7 +602,7 @@
       </div>
       <div class="product-frame reveal">
         <div class="chrome"><span></span><span></span><span></span></div>
-        <img src="product_preview.png" alt="EduSphere dashboard showing student attendance, fee collection, and recent activity for a school" loading="lazy">
+        <img src="product_preview.webp" alt="EduSphere dashboard showing student attendance, fee collection, and recent activity for a school" loading="lazy">
       </div>
     </div>
   </section>
@@ -604,6 +630,51 @@
           <span class="why-num mono">direct_support</span>
           <h3>A team you can actually reach</h3>
           <p>Based in Gujranwala, working directly with the schools we serve. No call centers, no ticket queues.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="tag"><span class="tag-open">&lt;team<span class="bracket">&gt;</span></span></span>
+      </div>
+      <h2 class="section-title reveal">Meet the team</h2>
+      <p class="section-sub reveal">Four people, on the ground in Gujranwala, building this directly.</p>
+
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-avatar">
+            <img src="team_hamza.webp" alt="Hamza Meer, Founder and Acting CEO of ByteDX" width="112" height="112" loading="lazy">
+          </div>
+          <h3>Hamza Meer</h3>
+          <span class="team-role">Founder &amp; Acting CEO</span>
+          <p class="team-qual">Bachelor of Computer Science</p>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-avatar">
+            <img src="team_haider.webp" alt="Haider, Co-founder and CTO of ByteDX" width="112" height="112" loading="lazy">
+          </div>
+          <h3>Haider</h3>
+          <span class="team-role">Co-founder &amp; CTO</span>
+          <p class="team-qual">Bachelor of Computer Science</p>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-avatar">
+            <img src="team_ansar.webp" alt="Ansar, Co-founder and Manager of ByteDX" width="112" height="112" loading="lazy">
+          </div>
+          <h3>Ansar</h3>
+          <span class="team-role">Co-founder &amp; Manager</span>
+          <p class="team-qual">Bachelor of Laws (LLB)</p>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-avatar">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#DD9A3D" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+          </div>
+          <h3>Ali</h3>
+          <span class="team-role">Co-founder &amp; Senior Technical Advisor</span>
+          <p class="team-qual">PhD in Civil Engineering</p>
         </div>
       </div>
     </div>
@@ -651,11 +722,11 @@
         <p>Whether it's a school looking to go digital or a business with an engineering problem, tell us what you're working with.</p>
         <div class="contact-detail">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 2.9a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.6a2 2 0 0 1 1.7 2.1Z"/></svg>
-          +92 3XX XXXXXXX
+          +92 302 5547052
         </div>
         <div class="contact-detail">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
-          hamzameer4152@gmail.com
+          bytedx.official@gmail.com
         </div>
         <div class="contact-detail">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -663,7 +734,7 @@
         </div>
       </div>
 
-      <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/hamzameer4152@gmail.com" method="POST">
+      <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/bytedx.official@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="New message from ByteDX website">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
@@ -710,6 +781,7 @@
         <a href="#services">Services</a>
         <a href="#product">EduSphere</a>
         <a href="#why">Why Us</a>
+        <a href="#team">Team</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </div>
@@ -775,7 +847,7 @@
         throw new Error('Network response was not ok');
       }
     }).catch(function(){
-      status.textContent = "Something went wrong. Please email us directly at hamzameer4152@gmail.com.";
+      status.textContent = "Something went wrong. Please email us directly at bytedx.official@gmail.com.";
       status.className = 'form-status error';
     });
   });
